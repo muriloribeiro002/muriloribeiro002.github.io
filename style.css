@@ -27,10 +27,12 @@ h1,h2{
 .menu-lista{
 display: flex;
 gap: 15px;
+flex-wrap: wrap;
 }
 
 li{
     list-style: none;
+    margin-bottom: 20px;
 }
 
 a{
