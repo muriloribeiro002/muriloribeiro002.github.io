@@ -1,49 +1,80 @@
-
-body{
+/* Configurações Gerais */
+* {
+    box-sizing: border-box;
     margin: 0;
-    font-family:Georgia, 'Times New Roman', Times, serif ;
-    background: orangered;
-    padding: 40px;
-    display: grid;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0f0c1b; /* Fundo escuro moderno */
+    color: #f3f4f6;
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 40px;
 }
 
-h1,h2{
-    margin: 0;
-}
-
-.header{
-   h1{
+/* Cabeçalho */
+.header {
     text-align: center;
-    }
+    max-width: 800px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    background: linear-gradient(45deg, #a855f7, #6366f1); /* Degradê roxo e azul */
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.header .subtitle {
+    color: #9ca3af;
+    font-size: 1.1rem;
+}
+
+/* Container do Grid */
+.menu-container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Lista transformada em Grid Responsivo */
+.menu-lista {
     display: grid;
-    gap: 40px;
-}
-
-.menu-container{
-
-}
-
-.menu-lista{
-display: flex;
-gap: 15px;
-flex-wrap: wrap;
-}
-
-li{
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
     list-style: none;
-    margin-bottom: 20px;
+    width: 100%;
 }
 
-a{
+/* Estilização dos Links (Cards) */
+.menu-lista a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 70px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #e5e7eb;
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    padding: 12px 16px;
-    background: purple;
-    text-transform: uppercase;
-border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-a:hover{
-    background-color: rgb(211, 0, 211);
+/* Efeito de Hover nos Cards */
+.menu-lista a:hover {
+    background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%);
+    border-color: transparent;
+    color: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(124, 58, 237, 0.3);
 }
